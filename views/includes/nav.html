@@ -1,0 +1,15 @@
+<nav id="nav">
+    <ul class="links">
+        {% for item in nav %}
+        <li {% if currentUrl == "/" %} class="active" {% endif %}><a href="/">{{item.title}}</a></li>
+        {% endfor %}
+        <li {% if currentUrl == "/generic" %} class="active" {% endif %}><a href="/generic">Generic Page</a></li>
+        <li {% if currentUrl == "/elements" %} class="active" {% endif %} ><a href="/elements">Elements Reference</a></li>
+    </ul>
+    <ul class="icons">
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+    </ul>
+</nav>

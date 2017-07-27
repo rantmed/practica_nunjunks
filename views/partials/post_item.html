@@ -1,0 +1,11 @@
+<article>
+    <header>
+        <span class="date">{{item.date | date("DD-MM-YYYY")}}</span> <!-- item es la variable de la iteración. La barra es como un filtro que cambia el formato de la fecha -->
+        <h2><a href="#">{{ item.title }}</a></h2>
+    </header>
+    <a href="#" class="image fit"><img src="{{item.image}}" alt="" /></a>
+    <p>{{item.intro}}</p>
+    <ul class="actions">
+        <li><a href="#" class="button">Full Story</a></li>
+    </ul>
+</article>

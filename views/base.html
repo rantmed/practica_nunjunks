@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{% block title %}Home{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{% block css%}	
+			{% include "includes/css.html"%}
+		{% endblock %}
+    </head>
+	<body class="is-loading">
+			<div id="wrapper" class="fade-in">
+				{% block header %}
+					<header id="header">
+						<a href="/" class="logo">Massively</a>
+					</header>
+				{% endblock %}
+
+				{% block nav %}					
+					{% include "includes/nav.html" %}
+				{% endblock %}
+				
+				<div id="main">
+					{% block content %}{% endblock %}
+				</div>
+
+				{% block footer %}
+					{% include "includes/footer.html" %}
+				{% endblock %}
+			</div>
+
+			{% block js %}
+				{% include "includes/js.html" %}
+			{% endblock %}
+	</body>
+</html>
